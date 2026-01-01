@@ -22,3 +22,4 @@ fs.mkdirSync(`D:/${folderName}`); // creates a folder in the specified location 
 
 // EXAMPLE: CREATE A FILE
 
+// action creates readines, confidence, momentum, and clarity all at once
