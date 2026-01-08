@@ -56,6 +56,12 @@ app.get('/r/:subreddit/comments/:postId/:title', (req, res) => {
   );
 });
 
+app.get('/search', (req, res) => {
+  console.log(req.query); // contains keyvalue pairs based upon the query of the client
+  const { q } = req.query;
+  res.send(`Search results for: ${q}`);
+});
+
 app.get(/(.*)/, (req, res) => {
   res.send('I dont know this path');
 });
