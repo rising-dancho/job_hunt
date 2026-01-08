@@ -41,7 +41,19 @@ app.get('/', (req, res) => {
 // PARAMETERS
 
 app.get('/r/:subreddit', (req, res) => {
-  res.send("This is a subreddit!!");
+  // console.log(req.params);
+  const { subreddit } = req.params;
+  console.log(subreddit);
+  res.send(`<h1>This is a subreddit for ${subreddit}!!</h1>`);
+});
+
+app.get('/r/:subreddit/comments/:postId/:title', (req, res) => {
+  // console.log(req.params);
+  const { subreddit, postId, title } = req.params;
+  console.log(subreddit, postId, title);
+  res.send(
+    `<h1>Viewing post with ID: ${postId} with Title: ${title}, this is the ${subreddit} subreddit!!</h1>`
+  );
 });
 
 app.get(/(.*)/, (req, res) => {
