@@ -5,14 +5,47 @@ const port = 3000;
 
 // GOAL: have an incoming request get an outgoing response
 // anytime we make a request this callback will run (all requests)
-app.use((req, res) => {
-  // console.log(`Request: ${req} `);
-  // console.dir(req);
-  console.log(`We got a request!`);
-  console.dir(res);
-  res.send(
-    '<b>Hello, we got your request. This is a response from the server</b>'
-  );
+// .use is a catch all response
+// app.use((req, res) => {
+//   // console.log(`Request: ${req} `);
+//   // console.dir(req);
+//   console.log(`We got a request!`);
+//   console.dir(res);
+//   // res.send({ color: 'red' });
+//   res.send(
+//     '<b>Hello, we got your request. This is a response from the server</b>'
+//   );
+// });
+
+// /cats => 'meow'
+// /dogs => 'woof'
+// '/'
+
+// BASIC ROUTES
+app.get('/cats', (req, res) => {
+  res.send('meow!');
+});
+
+app.post('/cats', (req, res) => {
+  res.send('POST REQUEST from client. this is a response!! /cats route');
+});
+
+app.get('/dogs', (req, res) => {
+  res.send('woof!');
+});
+
+app.get('/', (req, res) => {
+  res.send('Welcome to my domain');
+});
+
+// PARAMETERS
+
+app.get('/r/:subreddit', (req, res) => {
+  res.send("This is a subreddit!!");
+});
+
+app.get(/(.*)/, (req, res) => {
+  res.send('I dont know this path');
 });
 
 app.listen(port, () => {
