@@ -59,6 +59,9 @@ app.get('/r/:subreddit/comments/:postId/:title', (req, res) => {
 app.get('/search', (req, res) => {
   console.log(req.query); // contains keyvalue pairs based upon the query of the client
   const { q } = req.query;
+  if(!q){
+    res.send('Nothing found if nothing searched');
+  }
   res.send(`Search results for: ${q}`);
 });
 
