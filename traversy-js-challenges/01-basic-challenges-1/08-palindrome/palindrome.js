@@ -18,8 +18,8 @@ function isPalindrome(word) {
   return false;
 }
 
-console.log(isPalindrome('madam'));
+console.log(isPalindrome('madam %^&$%@#'));
 console.log(isPalindrome('racecar'));
 console.log(isPalindrome('A man, a plan, a canal, Panama'));
 console.log(isPalindrome('12321'));
-// module.exports = isPalindrome;
+module.exports = isPalindrome;
