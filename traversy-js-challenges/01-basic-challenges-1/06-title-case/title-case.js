@@ -1,23 +1,29 @@
-function titleCase(word) {
-  // console.log(word.split(' '));
-  const sentence = word.toLowerCase().split(' ');
-  let result = '';
+/**
+ * Returns a string with the first letter of each word capitalized.
+ * @param {string} str - The string to capitalize.
+ * @returns {string} - The string with the first letter of each word capitalized.
+ */
+// function titleCase(str: string): string;
+function titleCase(sentence) {
+  // console.log(sentence.split(''));
+  // normalize
 
-  for (let i = 0; i < sentence.length; i++) {
-    // console.log(sentence[i][0]); // first letter
-    // console.log(sentence[i].slice(1));
-    let words = sentence[i][0].toUpperCase() + sentence[i].slice(1);
-    // console.log(words);
-    result += words;
+  let word = sentence.split(' ');
+  console.log(`split word length: ${word.length}`);
+  // titleCase
+  let titleCase = '';
 
-    // conditionally add trailing spaces
-    if (i !== sentence.length - 1) {
-      result += ' ';
+  for (let i = 0; i <= word.length - 1; i++) {
+    // console.log(word[i][0].toUpperCase() + word[i].slice(1));
+    titleCase += word[i][0].toUpperCase() + word[i].slice(1).toLowerCase();
+    // console.log(titleCase)
+
+    if (i !== word.length - 1) {
+      titleCase += ' ';
     }
   }
-
-  return result;
+  return titleCase;
 }
-// console.log(titleCase('etits ng kalabaw'));
 
-module.exports = titleCase;
+console.log(titleCase('sHoRt AnD sToUt'));
+// module.exports = titleCase;

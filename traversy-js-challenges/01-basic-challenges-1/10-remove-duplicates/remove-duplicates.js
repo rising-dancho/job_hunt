@@ -19,4 +19,7 @@ console.log(
   removeDuplicates([1, 2, 3, 4, 5, true, 1, 'hello', 2, 3, 'hello', true])
 );
 
-// module.exports = removeDuplicates;
+// const removeDuplicates = (array) => {
+//   return new Set(array);
+// };
+module.exports = removeDuplicates;

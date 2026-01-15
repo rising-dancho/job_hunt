@@ -15,7 +15,6 @@ Write a function called `findMaxNumber` that takes in an array of numbers and re
 function findMaxNumber(arr: number[]): number;
 ```
 
-### Examples
 
 ```js
 findMaxNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]); // 10

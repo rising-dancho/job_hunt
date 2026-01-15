@@ -18,6 +18,11 @@ function countOccurrences(word, char) {
   return count;
 }
 
+// const countOccurrences = (word, char) => {
+//   console.log(word.split(''));
+  
+// };
+
 // countOccurrences('hellLo world', 'l');
 
 module.exports = countOccurrences;
