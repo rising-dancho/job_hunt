@@ -25,5 +25,5 @@ function titleCase(sentence) {
   return titleCase;
 }
 
-console.log(titleCase('sHoRt AnD sToUt'));
-// module.exports = titleCase;
+// console.log(titleCase('sHoRt AnD sToUt'));
+module.exports = titleCase;
